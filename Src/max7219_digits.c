@@ -100,7 +100,7 @@ MAX7219_STATUS MAX7219_SetDecodeMode(uint8_t DeviceNumber, MAX7219_DecodeMode De
 	return MAX7219_OK;
 }
 
-MAX7219_STATUS MAX7219_SetIntensity(uint8_t DeviceNumber, MAX7219_ScanLimit Intensity)
+MAX7219_STATUS MAX7219_SetIntensity(uint8_t DeviceNumber, uint8_t Intensity)
 {
 	if(DeviceNumber >= MAX7219_DEVICES || Intensity > 16)
 	{
@@ -115,7 +115,7 @@ MAX7219_STATUS MAX7219_SetIntensity(uint8_t DeviceNumber, MAX7219_ScanLimit Inte
 	return MAX7219_OK;
 }
 
-MAX7219_STATUS MAX7219_SetScanLimit(uint8_t DeviceNumber, uint8_t Limit)
+MAX7219_STATUS MAX7219_SetScanLimit(uint8_t DeviceNumber, MAX7219_ScanLimit Limit)
 {
 	if(DeviceNumber >= MAX7219_DEVICES || Limit > 8)
 	{
